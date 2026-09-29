@@ -1,3 +1,4 @@
+import ttsc from "@ttsc/unplugin/rolldown";
 import { defineConfig } from "tsdown";
 
 export default defineConfig({
@@ -9,4 +10,6 @@ export default defineConfig({
   // Lint options
   publint: true,
   attw: true,
+  // Plugins
+  plugins: [ttsc()],
 });

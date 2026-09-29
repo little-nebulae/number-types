@@ -1,6 +1,5 @@
 # Dependency settings
 savePrefix: ""
-enableGlobalVirtualStore: true
 allowBuilds:
   esbuild: true
 
