@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@arethetypeswrong/core": "0.18.5",
+    "@little-nebulae/utility-types": "0.2.0",
     "@ttsc/unplugin": "0.30.4",
     "@types/node": "26.6.3",
     "oxfmt": "0.71.0",
@@ -31,13 +32,12 @@
     "publint": "0.3.24",
     "tsdown": "0.23.0",
     "ttsc": "0.30.4",
-    "type-fest": "5.10.0",
     "typescript": "7.0.2",
     "typia": "15.0.1",
     "vitest": "5.0.2"
   },
   "peerDependencies": {
-    "type-fest": "^5.0.0",
+    "@little-nebulae/utility-types": "^0.2.0",
     "typia": "^15.0.0"
   },
   "devEngines": {
