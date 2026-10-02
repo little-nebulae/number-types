@@ -1,3 +1,5 @@
+import type { Simplify } from "type-fest";
+
 export type Int8Subtype = "int8";
 export type Int16Subtype = "int16";
 export type Int32Subtype = "int32";
@@ -12,18 +14,6 @@ export type DoubleSubtype = "double";
 export type Int64Subtype = "int64";
 export type Uint64Subtype = "uint64";
 
-export type NumberSubtype =
-  | Int8Subtype
-  | Int16Subtype
-  | Int32Subtype
-  | Uint8Subtype
-  | Uint16Subtype
-  | Uint32Subtype
-  | FloatSubtype
-  | DoubleSubtype
-  | Int64Subtype
-  | Uint64Subtype;
-
 export type IntegerSubtype =
   | Int8Subtype
   | Int16Subtype
@@ -32,4 +22,10 @@ export type IntegerSubtype =
   | Uint16Subtype
   | Uint32Subtype;
 
-export type BigintSubtype = Int64Subtype | Uint64Subtype;
+export type JsNumberSubtype = Simplify<
+  IntegerSubtype | FloatSubtype | DoubleSubtype
+>;
+
+export type BigIntegerSubtype = Int64Subtype | Uint64Subtype;
+
+export type TypiaNumberSubtype = Simplify<JsNumberSubtype | BigIntegerSubtype>;
