@@ -22,12 +22,12 @@ export type IntegerSubtypeName =
   | Uint16SubtypeName
   | Uint32SubtypeName;
 
-export type JsNumberSubtypeName = Simplify<
+export type NumberSubtypeName = Simplify<
   IntegerSubtypeName | FloatSubtypeName | DoubleSubtypeName
 >;
 
 export type BigIntegerSubtypeName = Int64SubtypeName | Uint64SubtypeName;
 
 export type TypiaNumberSubtypeName = Simplify<
-  JsNumberSubtypeName | BigIntegerSubtypeName
+  NumberSubtypeName | BigIntegerSubtypeName
 >;

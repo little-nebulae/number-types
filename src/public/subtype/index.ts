@@ -7,7 +7,7 @@ import type {
   Int32SubtypeName,
   Int64SubtypeName,
   IntegerSubtypeName,
-  JsNumberSubtypeName,
+  NumberSubtypeName,
   TypiaNumberSubtypeName,
 } from "@/public/subtype/names";
 
@@ -15,7 +15,7 @@ export type TypiaNumberSubtype<
   T extends TypiaNumberSubtypeName = DoubleSubtypeName,
 > = Tagged<number & tags.Type<T>, T>;
 
-export type JsNumberSubtype<T extends JsNumberSubtypeName = DoubleSubtypeName> =
+export type NumberSubtype<T extends NumberSubtypeName = DoubleSubtypeName> =
   TypiaNumberSubtype<T>;
 
 export type IntegerSubtype<T extends IntegerSubtypeName = Int32SubtypeName> =
